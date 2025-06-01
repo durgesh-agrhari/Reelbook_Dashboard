@@ -1,0 +1,157 @@
+.details-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.details-container {
+  background-color: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.details-header h2 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 24px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #666;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+.details-content {
+  padding: 20px;
+}
+
+.story-display {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.story-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.story-duration {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.story-info {
+  padding: 20px 0;
+}
+
+.story-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.story-meta {
+  display: flex;
+  gap: 20px;
+  color: #666;
+  font-size: 14px;
+}
+
+.story-stats {
+  display: flex;
+  gap: 15px;
+  color: #666;
+  font-size: 14px;
+}
+
+.story-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.action-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.action-btn.delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.action-btn.delete:hover {
+  background-color: #c82333;
+}
+
+.action-btn.report {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.action-btn.report:hover {
+  background-color: #e0a800;
+}
+
+@media (max-width: 768px) {
+  .details-container {
+    width: 95%;
+    margin: 10px;
+  }
+
+  .story-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .story-actions {
+    flex-direction: column;
+  }
+
+  .action-btn {
+    width: 100%;
+  }
+} 
